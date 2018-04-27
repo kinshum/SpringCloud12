@@ -1,0 +1,56 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/cx_content_db?characterEncoding=utf8&useSSL=false
+    username: 'root'
+    password: 'root'
+    initialSize: 10
+    minIdle: 5
+    maxActive: 120
+    maxWait: 60000
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 500
+
+  redis:
+    #codis: false
+    host: localhost
+    port: 6379
+    #zkHosts: 172.16.10.65:2181,172.16.10.66:2181,172.16.10.67:2181
+    #zkDir: /zk/codis/db_codis-w2cx/proxy
+  #sms:
+    #debugMode: false
+    #accessKeyId: LTAIhDnNOYcMiBOZ
+    #accessKeySecret: vF7vLhAuxvKzpq0Mu2Z5SGLKAwjpIA
+  model:
+    baseFilePath: E:\\tempFile\\model\\modelFile\\
+  #mail:
+    #host: smtp.exmail.qq.com
+    #username: 52cx@52cx.com
+    #password: '{cipher}0aeec7454073fc5e075a859595fd447694f1b7761d356ca0684587bc82803854'
+    #basePath: E:/tempFile/mail/ht/
+    #properties:
+      #mail:
+        #smtp:
+          #auth: true
+          #starttls:
+            #enable: true
+            #required: true
+  #elastic:
+    #clusterName: elasticsearch
+    #clusterNodes: 172.16.10.77:9300
+eureka:
+  instance:
+    host: localhost
+    port: 1111
+    preferIpAddress: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 30
+  client:
+    healthcheck:
+      enabled: false
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.host}:${eureka.instance.port}/eureka/

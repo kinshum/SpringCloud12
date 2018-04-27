@@ -1,0 +1,26 @@
+server:
+  port: 7001
+
+# 设置对称密钥
+encrypt:
+  key: foo
+
+     
+          
+# 本地配置          
+spring:
+  application:
+    name: de-configurer
+    
+  profiles:
+    active: native
+  cloud:
+    config:
+      server: 
+        native: 
+          searchLocations: classpath:/de-config
+
+
+management:
+  security:
+    enabled: false

@@ -1,0 +1,18 @@
+server:
+  port: 5004
+
+management:
+  security:
+    enabled: false
+  health:  
+    mail:  
+      enabled: false
+      
+spring:
+  application:
+    name: face-web
+
+  cloud:
+    config:
+      name: ${spring.application.name}
+      uri: http://localhost:7001
