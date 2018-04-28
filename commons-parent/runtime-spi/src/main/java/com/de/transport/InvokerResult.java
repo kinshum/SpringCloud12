@@ -2,11 +2,14 @@ package com.de.transport;
 
 import java.io.Serializable;
 
-/**
- * 调用结果
- * 
+/**  
  *
- */
+ * @author jensen 
+ * @description  调用结果
+ * @date 2018/4/28 11:06
+ * @param
+ * @return 
+ */ 
 public final class InvokerResult implements Serializable {
 	/**
 	 * 
