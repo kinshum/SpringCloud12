@@ -62,13 +62,6 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-
-			<dependency>
-				<groupId>com.w2cx</groupId>
-				<artifactId>cx-commons-parent</artifactId>
-				<version>1.0.0</version>
-			</dependency>
-			
 		</dependencies>
 	</dependencyManagement>
 
@@ -123,7 +116,21 @@
 			<artifactId>druid</artifactId>
 			<version>${druid.version}</version>
 		</dependency>
-		
+
+
+		<dependency>
+			<groupId>com.de</groupId>
+			<artifactId>jakson</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.de</groupId>
+			<artifactId>runtime-spi</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+
+
 	</dependencies>
   
 	<modules>

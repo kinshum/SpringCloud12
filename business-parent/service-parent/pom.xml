@@ -27,8 +27,13 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-hystrix</artifactId>
 		</dependency>
-		
-		
+
+	   <dependency>
+		  <groupId>com.de</groupId>
+		  <artifactId>sqlSeesionFactory</artifactId>
+		  <version>0.0.1-SNAPSHOT</version>
+	  </dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -39,33 +44,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 
-	
-	<!-- 解决idea开发工具 不自动打包src 下   mapper.xml 文件文件文件 -->
-	<build>
-		<resources>
-			<resource>
-				<directory>src/main/resources</directory>
-				<excludes>
-					<exclude>**/*.properties</exclude>
-					<exclude>**/*.xml</exclude>
-				</excludes>
-				<filtering>true</filtering>
-			</resource>
-			<resource>
-				<directory>src/main/java</directory>
-				<includes>
-					<include>**/*.properties</include>
-					<include>**/*.xml</include>
-				</includes>
-				<filtering>true</filtering>
-			</resource>
-		</resources>
-	</build>
-  
+
 	<modules>
 		<module>service-base</module>
 	</modules>
+
+
 </project>

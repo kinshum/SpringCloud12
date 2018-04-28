@@ -6,19 +6,7 @@
     <version>0.0.1-SNAPSHOT</version>
 </parent>
   <artifactId>service-base</artifactId>
-  
-  <dependencies>
-     <dependency>
-            <groupId>com.de</groupId>
-            <artifactId>jakson</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.de</groupId>
-            <artifactId>runtime-spi</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-  </dependencies>
+
 
  	<profiles>
 		<profile>
@@ -40,8 +28,9 @@
 				<package.env>test</package.env>
 			</properties>
 		</profile>
-		
 	</profiles>
+
+
 	<build>
 	
 		<plugins>
@@ -49,37 +38,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			
-		<!-- 	<plugin>
-			    <groupId>com.spotify</groupId>
-			    <artifactId>docker-maven-plugin</artifactId>
-				<executions>
-					自动构建镜像
-					<execution>
-						<id>build-image</id>
-						<phase>package</phase>
-						<goals>
-							<goal>build</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<imageName>${docker.build.host}/${docker.image.prefix}/${project.artifactId}:${project.version}</imageName>
-					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
-					<resources>
-						<resource>
-							<targetPath>/</targetPath>
-							<directory>${project.build.directory}</directory>
-							<include>${project.build.finalName}.jar</include>
-						</resource>
-					</resources>
-					构建时覆盖以有映像的标签
-					<forceTags>true</forceTags>
-					自动push到无认证的私有仓库
-					<pushImage>true</pushImage>
-					<serverId>docker-registry</serverId>
-				</configuration>
-			</plugin> -->
 		</plugins>
 		
 		
@@ -92,15 +50,15 @@
 				</includes>
 				<filtering>false</filtering>
 			</resource>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                </includes>
-                <!-- 是否替换资源中的属性-->
-                <filtering>false</filtering>
-            </resource>
+
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+				<filtering>true</filtering>
+			</resource>
         </resources>
     </build>
-  
+
 </project>
