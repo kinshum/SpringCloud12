@@ -1,6 +1,8 @@
 package com.de.base.entity;
 
-public class SysDict {
+import java.io.Serializable;
+
+public class SysDict implements Serializable {
     private String id;
 
     private String type;
