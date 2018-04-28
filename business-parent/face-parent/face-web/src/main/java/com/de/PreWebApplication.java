@@ -12,6 +12,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.web.client.RestTemplate;
 
+/**  
+ *
+ * @author jensen 
+ * @description    启动类
+ * @date 2018/4/28 11:39
+ * @param
+ * @return 
+ */ 
 @SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
 @EnableDiscoveryClient
 @EnableCircuitBreaker
