@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.de.base.mapper.SysDictMapper">
+
+  <resultMap id="BaseResultMap" type="com.de.base.entity.SysDict">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="type" jdbcType="CHAR" property="type" />
+    <result column="dict_key" jdbcType="VARCHAR" property="dictKey" />
+    <result column="dict_code" jdbcType="VARCHAR" property="dictCode" />
+    <result column="dict_text" jdbcType="VARCHAR" property="dictText" />
+    <result column="dict_desc" jdbcType="VARCHAR" property="dictDesc" />
+    <result column="dict_order" jdbcType="VARCHAR" property="dictOrder" />
+    <result column="dict_pcode" jdbcType="VARCHAR" property="dictPcode" />
+    <result column="reserve1" jdbcType="VARCHAR" property="reserve1" />
+    <result column="reserve2" jdbcType="VARCHAR" property="reserve2" />
+    <result column="reserve3" jdbcType="VARCHAR" property="reserve3" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, type, dict_key, dict_code, dict_text, dict_desc, dict_order, dict_pcode, reserve1, 
+    reserve2, reserve3
+  </sql>
+
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sys_dict
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectSysDictList" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from sys_dict
+  </select>
+
+
+</mapper>
