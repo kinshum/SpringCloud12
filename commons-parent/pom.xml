@@ -63,10 +63,12 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-  
+
+
 	<modules>
 		<module>jakson</module>
 		<module>jedis</module>
 		<module>runtime-spi</module>
+		<module>sqlSeesionFactory</module>
 	</modules>
 </project>
