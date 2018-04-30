@@ -65,6 +65,8 @@
 	</dependencyManagement>
 
 
+
+
 	<modules>
 		<module>jakson</module>
 		<module>jedis</module>
