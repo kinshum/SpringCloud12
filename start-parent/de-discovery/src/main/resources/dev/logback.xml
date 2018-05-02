@@ -7,10 +7,10 @@
      -->
     <appender name="LOG-FILE"
         class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${LOG_PATH}/52cx-discovery-file.log</File>
+        <File>${LOG_PATH}/de-discovery-file.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- rollover daily -->
-            <fileNamePattern>${LOG_PATH}/history/%d{yyyy-MM,aux}/%d{yyyy-MM-dd}.52cx-discovery-file.log
+            <fileNamePattern>${LOG_PATH}/history/%d{yyyy-MM,aux}/%d{yyyy-MM-dd}.de-discovery-file.log
             </fileNamePattern>
             <maxHistory>30</maxHistory>
             <cleanHistoryOnStart>true</cleanHistoryOnStart>
@@ -22,10 +22,10 @@
     </appender>
      <appender name="LOG-WARN"
         class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${LOG_PATH}/52cx-discovery-warn.log</File>
+        <File>${LOG_PATH}/de-discovery-warn.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- rollover daily -->
-            <fileNamePattern>${LOG_PATH}/history/%d{yyyy-MM,aux}/%d{yyyy-MM-dd}.52cx-discovery-warn.log
+            <fileNamePattern>${LOG_PATH}/history/%d{yyyy-MM,aux}/%d{yyyy-MM-dd}.de-discovery-warn.log
             </fileNamePattern>
             <maxHistory>30</maxHistory>
             <cleanHistoryOnStart>true</cleanHistoryOnStart>
@@ -42,10 +42,10 @@
     </appender>
     <appender name="LOG-ERROR"
         class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${LOG_PATH}/52cx-discovery-error.log</File>
+        <File>${LOG_PATH}/de-discovery-error.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- rollover daily -->
-            <fileNamePattern>${LOG_PATH}/history/%d{yyyy-MM,aux}/%d{yyyy-MM-dd}.52cx-discovery-error.log
+            <fileNamePattern>${LOG_PATH}/history/%d{yyyy-MM,aux}/%d{yyyy-MM-dd}.de-discovery-error.log
             </fileNamePattern>
             <maxHistory>30</maxHistory>
             <cleanHistoryOnStart>true</cleanHistoryOnStart>
