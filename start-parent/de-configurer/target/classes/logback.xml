@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <configuration>
-	<property name="LOG_PATH" value="/w2cx-log" /> 
+	<property name="LOG_PATH" value="/de-log" />
 	
     <!-- <include resource="org/springframework/boot/logging/logback/base.xml"/>
      -->
@@ -25,7 +25,7 @@
         <File>${LOG_PATH}/52cx-config-warn.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- rollover daily -->
-            <fileNamePattern>${LOG_PATH}/history/%d{yyyy-MM,aux}/%d{yyyy-MM-dd}.52cx-config-warn.log
+            <fileNamePattern>${LOG_PATH}/history/%d{yyyy-MM,aux}/%d{yyyy-MM-dd}.de-log-config-warn.log
             </fileNamePattern>
             <maxHistory>30</maxHistory>
             <cleanHistoryOnStart>true</cleanHistoryOnStart>
@@ -42,10 +42,10 @@
     </appender>
     <appender name="LOG-ERROR"
         class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${LOG_PATH}/52cx-config-error.log</File>
+        <File>${LOG_PATH}/de-config-error.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- rollover daily -->
-            <fileNamePattern>${LOG_PATH}/history/%d{yyyy-MM,aux}/%d{yyyy-MM-dd}.52cx-config-error.log
+            <fileNamePattern>${LOG_PATH}/history/%d{yyyy-MM,aux}/%d{yyyy-MM-dd}.de-config-error.log
             </fileNamePattern>
             <maxHistory>30</maxHistory>
             <cleanHistoryOnStart>true</cleanHistoryOnStart>
@@ -61,21 +61,7 @@
 		</filter>
     </appender>
 
-<!--     <springProfile name="default">
-        <logger name="com.w2cx" level="DEBUG"/>
-    </springProfile>
-    <springProfile name="dev">
-        <logger name="com.w2cx" level="DEBUG"/>
-    </springProfile>
-    <springProfile name="test">
-        <logger name="com.w2cx" level="DEBUG"/>
-    </springProfile>
-    <springProfile name="stag">
-        <logger name="com.w2cx" level="WARN"/>
-    </springProfile>
-    <springProfile name="prod">
-		<logger name="com.w2cx" level="WARN" />
-    </springProfile> -->
+
 
 	<logger level="DEBUG" name="java.sql.Connection" additivity="false">
 		<appender-ref ref="LOG-FILE" />

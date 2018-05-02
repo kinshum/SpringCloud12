@@ -39,6 +39,16 @@ spring:
       cluster-name: elasticsearch
       repositories:
         enabled: true
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    listener:
+      concurrency: 3
+    producer:
+      batch-size: 1000
+    consumer:
+      group-id: myGroup
+    template:
+      default-topic: topic-1
   model:
     baseFilePath: E:\\tempFile\\model\\modelFile\\
 eureka:

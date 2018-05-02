@@ -1,0 +1,1 @@
+package com.de.kafka.constant;/** * @Author: jensen * @Description: * @Date: Created 0:06 2018/5/3 */public class TopicConstant {    public static final String TOPIC = "MGS_TOPIC";}
