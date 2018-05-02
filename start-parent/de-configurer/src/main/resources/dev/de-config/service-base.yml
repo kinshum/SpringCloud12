@@ -1,10 +1,5 @@
 spring:
   redis:
-    #codis: false
-    #host: localhost
-    #port: 6379
-    #zkHosts: 172.16.10.65:2181,172.16.10.66:2181,172.16.10.67:2181
-    #zkDir: /zk/codis/db_codis-w2cx/proxy
     pool:
       max-active: 8
       max-wait: 1
@@ -26,6 +21,7 @@ spring:
     maxWait: 60000
     poolPreparedStatements: true
     maxPoolPreparedStatementPerConnectionSize: 500
+    #Cluster node port configuration
   #mail:
     #host: smtp.exmail.qq.com
     #username: 52cx@52cx.com
@@ -37,9 +33,12 @@ spring:
           #starttls:
             #enable: true
             #required: true
-  #elastic:
-    #clusterName: elasticsearch
-    #clusterNodes: 172.16.10.77:9300
+  data:
+    elasticsearch:
+      cluster-nodes: 127.0.0.1:9300
+      cluster-name: elasticsearch
+      repositories:
+        enabled: true
   model:
     baseFilePath: E:\\tempFile\\model\\modelFile\\
 eureka:

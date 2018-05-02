@@ -1,0 +1,1 @@
+package com.de.service;import com.de.entity.Entity;import java.util.List;/** * @Author: jensen * @Description: es 服务层 * @Date: Created 18:34 2018/5/2 */public interface CityESService {    Long saveEntity(Entity entity);    List<Entity> searchEntity(int pageNumber, int pageSize, String searchContent);}

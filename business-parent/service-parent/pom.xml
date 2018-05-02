@@ -28,13 +28,17 @@
 			<artifactId>spring-cloud-starter-hystrix</artifactId>
 		</dependency>
 
-	   <dependency>
+	  <dependency>
 		  <groupId>com.de</groupId>
 		  <artifactId>sqlSeesionFactory</artifactId>
 		  <version>0.0.1-SNAPSHOT</version>
 	  </dependency>
 
-
+	  <dependency>
+		  <groupId>com.de</groupId>
+		  <artifactId>elasticsearch</artifactId>
+		  <version>0.0.1-SNAPSHOT</version>
+	  </dependency>
 
 		<dependency>
 			<groupId>junit</groupId>

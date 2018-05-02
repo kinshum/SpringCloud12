@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,6 +31,19 @@ public class SysDictController {
 		return restTemplate.postForEntity(url,map,InvokerResult.class).getBody();
 
 	}
+
+
+	@GetMapping(value = "/listByEsSerch")
+	public InvokerResult getSysDictList(@RequestParam(value="content") String content) {
+		InvokerResult result = new InvokerResult();
+		String url = String.format("http://service-base/%s", "sysDict/getListForEsSerch?contentName="+content);
+		return restTemplate.getForObject(url,InvokerResult.class);
+
+	}
+
+
+
+
 	
 
 }
