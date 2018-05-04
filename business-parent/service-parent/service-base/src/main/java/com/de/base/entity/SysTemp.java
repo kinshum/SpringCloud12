@@ -1,7 +1,11 @@
 package com.de.base.entity;
 
+import org.springframework.data.elasticsearch.annotations.Document;
+
 import java.io.Serializable;
 
+
+@Document(indexName="sys_temp", type="sttype")
 public class SysTemp implements Serializable {
     private String id;
 
@@ -62,4 +66,7 @@ public class SysTemp implements Serializable {
     public void setWeathercnid(String weathercnid) {
         this.weathercnid = weathercnid == null ? null : weathercnid.trim();
     }
+
+
+
 }

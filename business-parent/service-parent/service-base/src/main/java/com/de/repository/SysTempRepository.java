@@ -1,0 +1,1 @@
+package com.de.repository;import com.de.base.entity.SysTemp;import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;/** * @Author: jensen * @Description: * @Date: Created 0:24 2018/5/4 */public interface SysTempRepository extends ElasticsearchRepository<SysTemp,Long> {}
